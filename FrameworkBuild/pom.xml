@@ -66,7 +66,6 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.8.1</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.fitnesse</groupId>
@@ -78,6 +77,7 @@
 			<groupId>org.uncommons</groupId>
 			<artifactId>reportng</artifactId>
 			<version>1.1.2</version>
+			<scope>test</scope>
 			<exclusions>
 				<exclusion>
 					<groupId>org.testng</groupId>
@@ -97,6 +97,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
 	<build>
 		<defaultGoal>install</defaultGoal>
 		<plugins>
@@ -107,6 +108,9 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>testngSuite.xml</suiteXmlFile>
 					</suiteXmlFiles>
+<!-- 					 <suiteXmlFiles>  -->
+<!-- 					<suiteXmlFile>xmlData/${testSuite}.xml</suiteXmlFile> -->
+<!--  					</suiteXmlFiles> -->
 					<properties>
 						<property>
 							<name>usedefaultlisteners</name>
@@ -117,9 +121,6 @@
 							<value>org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter</value>
 						</property>
 					</properties>
-					 <suiteXmlFiles> 
-					<suiteXmlFile>xmlData/${testSuite}.xml</suiteXmlFile>
- 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
 		</plugins>
