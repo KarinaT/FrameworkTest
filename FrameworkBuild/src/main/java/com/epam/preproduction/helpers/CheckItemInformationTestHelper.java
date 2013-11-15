@@ -8,7 +8,6 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.Reporter;
 
 import com.epam.preproduction.pages.CataloguePage;
 import com.epam.preproduction.pages.ItemPage;
